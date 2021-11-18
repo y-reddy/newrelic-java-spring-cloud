@@ -46,6 +46,7 @@ public abstract class FilteringWebHandler_Instrumentation {
             NewRelic.setTransactionName("Web", simplifiedPath);
             NewRelic.getAgent().getLogger().log(Level.FINER,
                     "spring-cloud-gateway Instrumentation: Setting web transaction name to " + simplifiedPath);
+            System.out.println("NEWRELIC-PLUGIN: Setting web transaction name to " + simplifiedPath);
         } catch (Exception e) {
             System.out.println("ERROR spring-cloud-gateway Instrumentation: " + e.getMessage());
         }
